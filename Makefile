@@ -2,7 +2,7 @@
 
 image:
 	docker pull ubuntu:20.04 && \
-	docker build -t superhumane/hasura-dev-box . #--no-cache . && \
+	docker build -t superhumane/hasura-dev-box . && \
 	docker push superhumane/hasura-dev-box
 
 stop:
@@ -14,4 +14,4 @@ rm:
 bash:
 	docker run -it superhumane/hasura-dev-box bash
 
-
+.PHONY: image stop rm bash
